@@ -30,8 +30,10 @@ tar xf libssh-0.9.5.tar.xz ; cd libssh-0.9.5
 mkdir build ; cd build
 cmake .. && sudo make install
 cd ../..
-git clone https://github.com/pentix/qjournalctl.git
+
+git clone https://github.com/eb-vgavrila/qjournalctl.git
 cd qjournalctl/
+git checkout -b local-remote-filters origin/local-remote-filters
 ./autogen.sh
 make -j$(nproc)
 sudo make install

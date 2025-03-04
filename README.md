@@ -21,6 +21,23 @@ quickly for specific reports or errors.
 Maybe you want to checkout the [Changelog](https://github.com/pentix/qjournalctl/blob/master/CHANGELOG.md).
 
 
+## Compile, build and run on Ubuntu Desktop 24.04
+
+```sh
+sudo apt-get install -y qtbase5-dev cmake libssl-dev pkg-config zlib1g-dev build-essential
+wget https://www.libssh.org/files/0.9/libssh-0.9.5.tar.xz
+tar xf libssh-0.9.5.tar.xz ; cd libssh-0.9.5
+mkdir build ; cd build
+cmake .. && sudo make install
+cd ../..
+git clone https://github.com/pentix/qjournalctl.git
+cd qjournalctl/
+./autogen.sh
+make -j$(nproc)
+sudo make install
+```
+* Launch `QJournalctl` from Apps
+
 ## QJournalctl for Linux
 
 ### ArchLinux and Manjaro

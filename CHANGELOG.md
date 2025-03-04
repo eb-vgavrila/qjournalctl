@@ -1,5 +1,9 @@
 ## Changelog
 
+### Unreleased
+* Added Remote and Local filtering based on some Regex (#59)
+* Color highlighting for filtered log (#56)
+
 #### v0.6.4 (2023, Dec. 25)
 * Support loading a journald DB folder (#70)
 * Fix several small issues in the ShowBootLog / MainWindow module
